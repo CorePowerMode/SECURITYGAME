@@ -19,8 +19,8 @@ def askPlayer():
 
 
 # Loading Files
-with open("scenarios.txt", "r") as scenarioFile:
-    for line in scenarioFile:
+with open("scenarios.txt", "r") as scenarioFile: 
+    for line in scenarioFile: # CHANGE THIS TO MATCH WHILE LOOP AS IN THE PSEUDOCODE FILE
         scenarios_list.append(line)
 
 
@@ -121,6 +121,7 @@ def main():
 
 
     
+
 
 
 
