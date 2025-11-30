@@ -1,0 +1,7 @@
+PERMISSIONS GUIDE
+
+Read:
+Write:
+Execute:
+Admin:
+No Access:
