@@ -21,13 +21,13 @@ def askPlayer():
 # Loading Files
 with open("scenarios.txt", "r") as scenarioFile:
     for line in scenarioFile:
-        scenarios_list.append(line.strip())
+        scenarios_list.append(line)
 
 
 permissionFile = open("scenarios.txt", "r")
 permission_guide = permissionFile.read()
 permissionFile.close()
-print(permission_guide)
+
 
 
 
@@ -109,7 +109,7 @@ def update_score(points_earned):
 
 def main():
     '''
-    
+    CODE TO FILL
 
 
     '''
@@ -121,6 +121,7 @@ def main():
 
 
     
+
 
 
 
