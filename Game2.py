@@ -4,6 +4,7 @@ total_scenarios = 0
 scenarios_passed = 0
 scenarios_list = []
 scenario_index = 0
+correct_permissions = []
 
 
 
@@ -42,18 +43,15 @@ def display_permissions_guide(permissionGuide):
 def present_scenario():
    global scenario_index
    global player_score
-   line = scenarios_list[scenario_index]
-   scenarioLine = line.split("|")
-   
-   
+   global correct_permissions
 
-   scenarioNum = scenarioLine[0].strip()
-   role = scenarioLine[1].strip()
-   description = scenarioLine[2].strip()
+   scenario_line = scenarios_list[scenario_index].split("|")
+   correct_permissions = scenario_line[3].split()
 
-   print(f"Scenario: {scenarioNum}")
-   print(f"Role: {role}")
-   print(f"Description: {description}")
+
+   print(f"Scenario: {scenario_line[0]}")
+   print(f"Role: {scenario_line[1]}")
+   print(f"Description: {scenario_line[2]}")
    print(f"Current Score: {player_score}/100")
 
 
@@ -174,10 +172,6 @@ def main():
 
         present_scenario()
 
-    
-
-        correct_permissions = scenarios_list[scenario_index].split("|")[-1].split()
-
         selected = get_player_permission_choice()
         earned = evaluate_permissions(selected, correct_permissions)
         update_score(earned)
@@ -189,10 +183,29 @@ def main():
 
     play_again = str(input("Do you want to play again? [Y/N]:  "))
     if play_again.upper() == "Y":
-        print("Play again...")
+        print("Playing again...")
         main()
     elif play_again.upper() == "N":
         print("Exiting game...")
         exit()
 
 main()
+    
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
